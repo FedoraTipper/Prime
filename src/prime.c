@@ -42,11 +42,12 @@ int main(int argc, char const *argv[])
 
 	clock_t end = clock();
 	double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-	printf("total primes: %d\n", length);
-	printf("list: ");
-	for (int y = 0; y < 50; ++y){
-		printf("%d, ", primes[y]);
+	printf("Total primes: %d\n", length);
+	printf("Last prime: %d\n", primes[length - 1]);
+	printf("First 100 primes: \n[%d", primes[0]);
+	for (int y = 1; y <= 100; ++y){
+		printf(", %d ", primes[y]);
 	}
-	printf("\ntime: %f \n", time_spent);
+	printf("]\nTime: %f \n", time_spent);
 	return 0;
 }
